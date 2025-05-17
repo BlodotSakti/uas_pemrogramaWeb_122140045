@@ -1,94 +1,55 @@
-# 📚 My Book Manager
+# Website Manajemen Tugas dan Proyek Mandiri
 
-Aplikasi manajemen koleksi buku pribadi bernama MANKUDOT (Manajeman Buku Blodot), dibuat menggunakan React JS. Aplikasi ini memungkinkan pengguna untuk menambahkan buku yang sudah dimiliki, sedang dibaca dan ingin dibeli serta dapat mencari buku yang telah disimpan sebelumnya di `localStorage`. Terdapat juga fitur untuk mengedit dan menghapus buku yang ada. Selain itu, ada halaman statistic yang dapat melihat jumlah keseluruhan buku yang telah kita masukkan untuk di simpan di `localStorage`.
+## Deskripsi
+Website Manajemen Tugas dan Proyek Mandiri adalah sebuah aplikasi web yang dirancang untuk membantu mahasiswa atau pengguna akademik dalam memantau, mengelola, dan mengingat semua tugas, kuis, dan proyek perkuliahan mereka. Aplikasi ini menyediakan:
+- Penyimpanan daftar tugas dengan deadline terstruktur per mata kuliah  
+- Pengelompokan tugas berdasarkan kategori atau mata kuliah  
+- Ringkasan tugas harian dan mingguan  
+- Notifikasi dan reminder otomatis  
 
----
-
-## 🔍 Deskripsi Aplikasi
-
-MANKUDOT menyediakan fitur untuk:
-- **Menambah buku baru** dengan data judul, penulis, status: Milik Saya / Sedang Dibaca / Ingin Membeli)  
-- **Mengedit** dan **Menghapus** entri buku  
-- **Filter** daftar buku berdasarkan status  
-- **Pencarian** buku berdasarkan judul  
-- **Notifikasi** menggunakan React Toastify untuk aksi berhasil/gagal  
+Aplikasi ini dikembangkan oleh **Blodot Sakti Luhung** (NIM 122140045) sebagai tugas mata kuliah Pemrograman Web RB.
 
 ---
 
-## ⚙️ Instruksi Instalasi dan Menjalankan
-
-1. **Clone repository**  
-   ```bash
-   git clone https://github.com/BlodotSakti pemrograman_web_itera_122140045.git
-   cd BlodotSakti pemrograman_web_itera_122140045
-
-2. **Install dependencies**  
-   ```bash
-   npm install
-
-3. **Menjalankan aplikasi react**  
-   ```bash
-   npm start
-
-4. **Jalankan unit testing**  
-   ```bash
-   npm test
+## Daftar Isi
+1. [Fitur Utama](#fitur-utama)  
+2. [Dependensi & Teknologi](#dependensi--teknologi)  
+3. [Arsitektur](#arsitektur)  
+4. [Instalasi](#instalasi)  
+5. [Penggunaan](#penggunaan)  
+6. [Model Data & Entitas](#model-data--entitas)  
+7. [Kontribusi](#kontribusi)  
+8. [Referensi](#referensi)  
 
 ---
 
-## 📸 Screenshot Antarmuka
-
-Berikut ini adalah tampilan dari website MANKUDOT halaman Home:
-![Screenshot Aplikasi](./src/assets/Images/halamanHome.png) 
-.
-
-Berikut ini adalah tampilan dari website MANKUDOT halaman Statistics:
-![Screenshot Aplikasi](./src/assets/Images/halamanStats.png)
-
----
-
-## 🚀 Fitur React yang Digunakan
-Website ini dibangun menggunakan fitur-fitur React sebagai berikut:
-
-- ✅ **Create React App (CRA)**  
-  sebagai boilerplate
-
-- ✅ **Functional Components, Hooks**  
-  contoh: `useState, useEffect`
-
-- ✅ **Custom Hooks**  
-  `useLocalStorage` untuk sinkronasi state ↔️ localStorageh
-  
-  `useBookStats` untuk menghitung total buku yang ada
-
-- ✅ **Context API**  
-  `BookContext` untuk state global dan CRUD
-
-- ✅ **PropTypes**  
-  untuk validasi props
-
-- ✅ **React Router**  
-  `react-router-dom` untuk navigasi Home dan Stats
-
-- ✅ **React Toastify**  
-  untuk menampilkan notifikasi berhasil atau gagal
+## Fitur Utama
+1. **CRUD Tugas & Kategori**  
+   - Tambah, edit, hapus tugas dan kategori/mata kuliah  
+2. **Filter & Pencarian**  
+   - Cari tugas berdasarkan kata kunci atau mata kuliah  
+3. **Reminder & Notifikasi Otomatis**  
+   - Pengingat tugas mendekati deadline via toast/snackbar  
+4. **Kalender Deadline**  
+   - Tampilan kalender interaktif untuk memantau deadline  
 
 ---
 
-## 📝 Komentar dalam Kode
+## Dependensi & Teknologi
 
-- Pada folder `src/hooks/useLocalStorage.js`
-![Screenshot Aplikasi](./src/assets/Images/komentarHooks.png)
-.
-- Pada folder `src/context/BookContext.jsx`
-![Screenshot Aplikasi](./src/assets/Images/komentarContext.png)
+### Frontend
+- **React.js** (Functional Components & Hooks)  
+- **React Router DOM** — Routing antar halaman  
+- **Redux Toolkit** — Manajemen state terpusat  
+- **Axios** — HTTP client dengan interceptor JWT  
+- **Bootstrap** _atau_ **Tailwind CSS** — Styling responsif  
+- **React-Toastify** _atau_ **@mui/material Snackbar** — Notifikasi toast  
+
+### Backend
+- **Python Pyramid** — Framework web fleksibel  
+- **PostgreSQL** — Sistem manajemen basis data relasional  
+- **JSON Web Token (JWT)** — Otentikasi dan otorisasi API  
+- **RESTful API** — Akses dan modifikasi data  
 
 ---
 
-## ✅ Laporan Testing
-Berikut ini hasil dari unit testing yang dilakukan:
-![Screenshot Aplikasi](./src/assets/Images/ujiUnitTesting.png)
-
-
----
-> Dibuat oleh Blodot Sakti Luhung
