@@ -1,0 +1,81 @@
+.calendar-container {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(60,72,88,0.10);
+  padding: 2rem 1rem 1.5rem 1rem;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.react-calendar {
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  background: transparent;
+}
+
+.react-calendar__tile.deadline {
+  position: relative;
+  background: #fff7ed !important;
+  color: #d97706 !important;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.calendar-deadline-dot {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.calendar-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #f59e42;
+  border-radius: 50%;
+  margin-top: 2px;
+  margin-bottom: -2px;
+}
+
+.calendar-deadline-dot:hover .calendar-tooltip {
+  display: block;
+}
+
+.calendar-tooltip {
+  display: none;
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fffbe9;
+  color: #b45309;
+  border: 1px solid #f59e42;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(60,72,88,0.10);
+}
+
+.calendar-note {
+  margin-top: 1.5rem;
+  color: #888;
+  font-size: 0.98rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-task-title {
+  font-size: 0.7rem;
+  color: #b45309;
+  margin-top: 2px;
+  line-height: 1.1;
+  word-break: break-word;
+  font-weight: 500;
+}

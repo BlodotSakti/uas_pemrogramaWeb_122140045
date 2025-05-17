@@ -14,3 +14,7 @@ main {
   max-width: 960px;
   margin: auto;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

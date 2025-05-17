@@ -6,7 +6,12 @@ import { toast } from 'react-toastify';
 
 function TaskForm({ editTarget, clearEdit }) {
   const { addTask, updateTask } = useContext(TaskContext);
-  const [form, setForm] = useState({ title: '', tenggat: '', status: 'selesai' });
+  const [form, setForm] = useState({
+    title: '',
+    matkul: '',
+    tenggat: '',
+    status: 'selesai'
+  });
 
   useEffect(() => {
     if (editTarget) setForm(editTarget);
@@ -16,8 +21,8 @@ function TaskForm({ editTarget, clearEdit }) {
 
   const handleSubmit = e => {
     e.preventDefault();
-    if (!form.title || !form.tenggat) {
-      toast.error('Judul tugas dan deadline wajib diisi');
+    if (!form.title || !form.tenggat || !form.matkul) {
+      toast.error('Judul tugas, mata kuliah, dan deadline wajib diisi');
       return;
     }
     if (editTarget) {
@@ -28,15 +33,26 @@ function TaskForm({ editTarget, clearEdit }) {
       addTask({ ...form, id: Date.now().toString() });
       toast.success('Tugas baru ditambahkan!');
     }
-    setForm({ title: '', tenggat: '', status: 'selesai' });
+    setForm({ title: '', matkul: '', tenggat: '', status: 'selesai' });
   };
 
   return (
     <form className="task-form" onSubmit={handleSubmit}>
-      <input name="title" placeholder="Judul Tugas" value={form.title} onChange={handleChange} />
       <input
-        type="date" // Mengubah tipe input menjadi date
-        name="tenggat" // Pastikan name sesuai dengan state
+        name="title"
+        placeholder="Judul Tugas"
+        value={form.title}
+        onChange={handleChange}
+      />
+      <input
+        name="matkul"
+        placeholder="Mata Kuliah"
+        value={form.matkul}
+        onChange={handleChange}
+      />
+      <input
+        type="date"
+        name="tenggat"
         placeholder="Deadline"
         value={form.tenggat}
         onChange={handleChange}
@@ -51,6 +67,17 @@ function TaskForm({ editTarget, clearEdit }) {
   );
 }
 
+TaskForm.propTypes = {
+  editTarget: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    matkul: PropTypes.string,
+    tenggat: PropTypes.string,
+    status: PropTypes.string
+  }),
+  clearEdit: PropTypes.func,
+};
 
+TaskForm.defaultProps = { editTarget: null, clearEdit: () => {} }
 
 export default TaskForm;

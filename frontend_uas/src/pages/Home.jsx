@@ -12,8 +12,9 @@ function Home() {
   const clearEdit = () => setEditTarget(null);
 
   return (
-    <div className="home">
-      <div className="controls">
+    <div className="modern-container">
+      <h1 className="modern-title">Task Manager</h1>
+      <div className="controls modern-controls">
         <input
           type="text"
           placeholder="Cari tugas..."
@@ -22,7 +23,7 @@ function Home() {
         />
         <TaskFilter filterStatus={filterStatus} setFilterStatus={setFilterStatus} />
       </div>
-      <div className="content-grid">
+      <div className="modern-content-grid">
         <TaskForm editTarget={editTarget} clearEdit={clearEdit} />
         <TaskList
           searchTerm={searchTerm}
