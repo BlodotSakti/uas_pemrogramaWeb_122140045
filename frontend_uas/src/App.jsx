@@ -7,6 +7,7 @@ import './App.css'
 import History from './pages/History';
 import Chart from './pages/Chart';
 import Calendar from './pages/Calendar';
+import SubjectManager from './components/SubjectManager/SubjectManager';
 
 function Sidebar() {
   const location = useLocation();
@@ -19,6 +20,7 @@ function Sidebar() {
         <Link to="/history" className={location.pathname === "/history" ? "nav-link active" : "nav-link"}>Riwayat Tugas</Link>
         <Link to="/chart" className={location.pathname === "/chart" ? "nav-link active" : "nav-link"}>Grafik Tugas</Link>
         <Link to="/calendar" className={location.pathname === "/calendar" ? "nav-link active" : "nav-link"}>Kalender Deadline</Link>
+        <Link to="/subjects" className={location.pathname === "/subjects" ? "nav-link active" : "nav-link"}>Mata Kuliah</Link>
       </nav>
     </aside>
   );
@@ -40,6 +42,7 @@ function AppLayout() {
             <Route path="/history" element={<History />} />
             <Route path="/chart" element={<Chart />} />
             <Route path="/calendar" element={<Calendar />} />
+            <Route path="/subjects" element={<SubjectManager />} />
           </Routes>
         </main>
       </div>

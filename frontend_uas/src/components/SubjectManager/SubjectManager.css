@@ -1,0 +1,113 @@
+
+.subject-manager-container {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(60,72,88,0.10);
+  padding: 2rem 1rem;
+  max-width: 700px; /* Lebih lebar agar tabel muat */
+  margin: 2rem auto;
+  overflow-x: auto; /* Agar tabel bisa di-scroll di mobile */
+}
+
+.subject-list-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  background: #f8fafc;
+  border-radius: 10px;
+  overflow: hidden;
+  table-layout: fixed; /* Agar kolom proporsional */
+}
+
+.subject-list-table th, .subject-list-table td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px; /* Batasi lebar kolom */
+}
+
+.subject-list-table th {
+  background: #2563eb;
+  color: #fff;
+}
+
+.subject-list-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Responsive: scroll tabel di layar kecil */
+@media (max-width: 700px) {
+  .subject-manager-container {
+    padding: 1rem 0.2rem;
+    max-width: 100vw;
+  }
+  .subject-list-table th, .subject-list-table td {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.95rem;
+    max-width: 100px;
+  }
+}
+
+.aksi-btn {
+  display: inline-block;
+  padding: 0.35rem 1.1rem;
+  margin-right: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tambah-btn {
+  background: #22c55e;
+  color: #fff;
+}
+
+.tambah-btn:hover {
+  background: #15803d;
+}
+
+.edit-btn {
+  background: #2563eb;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background: #1746a2;
+}
+
+.hapus-btn {
+  display: inline-block;
+  padding: 0.35rem 0.5rem;
+  background: #ef4444;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.98rem;
+  cursor: pointer;
+  
+
+}
+
+.hapus-btn:hover {
+  background: #b91c1c;
+}
+
+.batal-btn {
+  background: #fbbf24;
+  color: #fff;
+}
+
+.batal-btn:hover {
+  background: #b45309;
+}
+
+.aksi-btn, .edit-btn, .hapus-btn, .batal-btn, .tambah-btn {
+  visibility: visible !important;
+  display: inline-block !important;
+  opacity: 1 !important;
+}

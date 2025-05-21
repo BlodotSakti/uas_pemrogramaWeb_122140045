@@ -1,0 +1,3 @@
+[run]
+source = pyramid_tugas
+omit = pyramid_tugas/test*

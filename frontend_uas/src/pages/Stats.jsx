@@ -7,7 +7,7 @@ function Stats() {
 
   return (
     <div className="stats-modern-container">
-      <h2 className="stats-title">Statistik Tugas</h2>
+      <h1 className="stats-title">Statistik Tugas</h1>
       <div className="stats-modern-grid">
         <div className="stat-modern-card done">
           <h3>{done}</h3>
